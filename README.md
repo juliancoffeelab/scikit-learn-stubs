@@ -63,6 +63,10 @@ You generally do not need `mypy_path`, `stubPath`, or custom search paths unless
 you are deliberately keeping these stubs outside the environment that runs your
 type checker.
 
+## See Also
+
+- [`matplotlib-stubs`](https://github.com/juliancoffeelab/matplotlib-stubs)
+
 ## License and attribution
 
 The copied stubs are licensed under the MIT License. Copyright belongs to
