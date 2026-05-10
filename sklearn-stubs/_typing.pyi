@@ -7,22 +7,19 @@ import typing_extensions
 from decimal import Decimal as Decimal
 
 import numpy as np
-import pandas as pd
 from numpy.typing import ArrayLike as ArrayLike
-from scipy.sparse import spmatrix
 
 from .base import BaseEstimator, ClassifierMixin, RegressorMixin
 
 PythonScalar: typing_extensions.TypeAlias = str | int | float | bool
 
-MatrixLike: typing_extensions.TypeAlias = np.ndarray | pd.DataFrame | spmatrix
+MatrixLike: typing_extensions.TypeAlias = object
 FileLike = io.IOBase
 PathLike = str
 Int: typing_extensions.TypeAlias = int | np.int8 | np.int16 | np.int32 | np.int64
 Float: typing_extensions.TypeAlias = float | np.float16 | np.float32 | np.float64
 
-PandasScalar: typing_extensions.TypeAlias = pd.Period | pd.Timestamp | pd.Timedelta | pd.Interval
-Scalar: typing_extensions.TypeAlias = PythonScalar | PandasScalar
+Scalar: typing_extensions.TypeAlias = PythonScalar
 
 Estimator = BaseEstimator
 Classifier = ClassifierMixin

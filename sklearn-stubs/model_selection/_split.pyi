@@ -1,11 +1,14 @@
 from abc import ABCMeta, abstractmethod
 from collections.abc import Iterable, Iterator
-from typing import Any, Callable
+from typing import Any, Callable, TypeVar, overload
 
 from numpy import ndarray
 from numpy.random import RandomState
 
 from .._typing import ArrayLike, Float, Int, MatrixLike
+
+_ArrayT = TypeVar("_ArrayT")
+_ArrayU = TypeVar("_ArrayU")
 
 __all__ = [
     "BaseCrossValidator",
@@ -195,11 +198,23 @@ def check_cv(
     *,
     classifier: bool = False,
 ) -> BaseCrossValidator: ...
+@overload
 def train_test_split(
-    *arrays,
+    array1: _ArrayT,
+    array2: _ArrayU,
+    *,
     test_size: None | Float = None,
     train_size: None | Float = None,
     random_state: RandomState | None | Int = None,
     shuffle: bool = True,
     stratify: None | ArrayLike = None,
-) -> list: ...
+) -> tuple[_ArrayT, _ArrayT, _ArrayU, _ArrayU]: ...
+@overload
+def train_test_split(
+    *arrays: object,
+    test_size: None | Float = None,
+    train_size: None | Float = None,
+    random_state: RandomState | None | Int = None,
+    shuffle: bool = True,
+    stratify: None | ArrayLike = None,
+) -> list[object]: ...

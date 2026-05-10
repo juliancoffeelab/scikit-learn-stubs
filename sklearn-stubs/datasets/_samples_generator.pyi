@@ -1,6 +1,7 @@
 from collections.abc import Iterable, Sequence
 from typing import Literal
 
+import numpy as np
 from numpy import ndarray
 from numpy.random import RandomState
 from scipy.sparse import spmatrix
@@ -71,7 +72,7 @@ def make_moons(
     shuffle: bool = True,
     noise: None | Float = None,
     random_state: RandomState | None | Int = None,
-) -> tuple[ndarray, ndarray]: ...
+) -> tuple[ndarray[tuple[int, int], np.dtype[np.float64]], ndarray[tuple[int], np.dtype[np.int_]]]: ...
 def make_blobs(
     n_samples: ArrayLike | int = 100,
     n_features: Int = 2,
