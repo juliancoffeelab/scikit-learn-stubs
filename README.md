@@ -72,3 +72,7 @@ license text is included in [`LICENSE`](LICENSE).
 All credit for the copied stub files goes to Microsoft and the contributors to
 `microsoft/python-type-stubs`. This repository is an extracted copy of the
 `sklearn` stubs for convenience.
+
+## See Also
+
+- [`matplotlib-stubs`](https://github.com/juliancoffeelab/matplotlib-stubs)
