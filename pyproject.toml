@@ -8,6 +8,10 @@ version = "0.1.0"
 description = "Type stubs for scikit-learn, copied from microsoft/python-type-stubs."
 readme = "README.md"
 requires-python = ">=3.9"
+dependencies = [
+    "pandas-stubs",
+    "scipy-stubs",
+]
 license = { file = "LICENSE" }
 authors = [{ name = "Microsoft Corporation and python-type-stubs contributors" }]
 classifiers = [
