@@ -63,10 +63,6 @@ You generally do not need `mypy_path`, `stubPath`, or custom search paths unless
 you are deliberately keeping these stubs outside the environment that runs your
 type checker.
 
-## See Also
-
-- [`matplotlib-stubs`](https://github.com/juliancoffeelab/matplotlib-stubs)
-
 ## License and attribution
 
 The copied stubs are licensed under the MIT License. Copyright belongs to
@@ -76,3 +72,7 @@ license text is included in [`LICENSE`](LICENSE).
 All credit for the copied stub files goes to Microsoft and the contributors to
 `microsoft/python-type-stubs`. This repository is an extracted copy of the
 `sklearn` stubs for convenience.
+
+## See Also
+
+- [`matplotlib-stubs`](https://github.com/juliancoffeelab/matplotlib-stubs)
