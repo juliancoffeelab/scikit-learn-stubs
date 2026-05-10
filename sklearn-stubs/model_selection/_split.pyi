@@ -9,6 +9,8 @@ from .._typing import ArrayLike, Float, Int, MatrixLike
 
 _ArrayT = TypeVar("_ArrayT")
 _ArrayU = TypeVar("_ArrayU")
+_ElementT = TypeVar("_ElementT")
+_ElementU = TypeVar("_ElementU")
 
 __all__ = [
     "BaseCrossValidator",
@@ -198,6 +200,17 @@ def check_cv(
     *,
     classifier: bool = False,
 ) -> BaseCrossValidator: ...
+@overload
+def train_test_split(
+    array1: list[_ElementT],
+    array2: list[_ElementU],
+    *,
+    test_size: None | Float = None,
+    train_size: None | Float = None,
+    random_state: RandomState | None | Int = None,
+    shuffle: bool = True,
+    stratify: None | list[_ElementU] | ArrayLike = None,
+) -> tuple[list[_ElementT], list[_ElementT], list[_ElementU], list[_ElementU]]: ...
 @overload
 def train_test_split(
     array1: _ArrayT,
